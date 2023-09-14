@@ -191,6 +191,18 @@ class Condition
                 return $attributeValue > $conditionValue;
             case '$gte':
                 return $attributeValue >= $conditionValue;
+            case '$veq':
+                return version_compare($attributeValue, $conditionValue, 'eq');
+            case '$vne':
+                return version_compare($attributeValue, $conditionValue, '!=');
+            case '$vlt':
+                return version_compare($attributeValue, $conditionValue, 'lt');
+            case '$vlte':
+                return version_compare($attributeValue, $conditionValue, 'le');
+            case '$vgt':
+                return version_compare($attributeValue, $conditionValue, 'gt');
+            case '$vgte':
+                return version_compare($attributeValue, $conditionValue, 'ge');
             case '$regex':
                 return @preg_match('/'.$conditionValue.'/', $attributeValue) === 1;
             case '$in':
