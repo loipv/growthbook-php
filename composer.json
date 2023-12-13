@@ -1,5 +1,5 @@
 {
-    "name": "growthbook/growthbook",
+    "name": "loipv/growthbook-php",
     "description": "PHP SDK for GrowthBook, the feature flagging and A/B testing platform",
     "type": "library",
     "require": {
